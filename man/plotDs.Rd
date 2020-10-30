@@ -25,10 +25,15 @@
 \examples{
 ## Use a Student-t CPM to detect a mean shift in a stream of Gaussian
 ## random variables which occurs after the 100th observation
-x <- c(rnorm(100, 0, 1), rnorm(1000, 1, 1))
-out <- detectChangePoint(x, "Student", ARL0 = 500, startup = 20)
+x <- c(rnorm(100, 0, 1), rnorm(100, 2, 1))
 
+out <- detectChangePoint(x, "Student", ARL0 = 500, startup = 20)
 plotDs(out)
+
+
+out <- detectChangePointBatch(x, "Student", alpha = 0.05)
+plotDs(out)
+
 }
 
 \author{

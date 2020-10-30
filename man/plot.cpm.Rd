@@ -31,8 +31,14 @@
 ## random variables which occurs after the 100th observation
 x <- c(rnorm(100, 0, 1), rnorm(1000, 1, 1))
 out <- detectChangePoint(x, "Student", ARL0 = 500, startup = 20)
-
 plot(out)
+
+out <- processStream(x, "Student", ARL0 = 500, startup = 20)
+plot(out)
+
+out <- detectChangePointBatch(x, "Student", alpha = 0.05)
+plot(out)
+
 }
 
 \author{

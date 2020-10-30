@@ -21,7 +21,7 @@ plotDs <- function(x, t = NULL, type = "l", ...) {
   if ("detectChangePoint"  %in% class(x)) {
     plot(t[seq_along(x$Ds)], x$Ds, type = type, xlab = "t", ylab = "Ds", 
          ylim = c(min(x$Ds, na.rm = TRUE), max(x$Ds, x$thresholds[x$thresholds != 99999], na.rm = TRUE)), ...)  
-    lines(t, x$threshold, lty = "dotted")
+    lines(t[seq_along(x$thresholds)], x$thresholds, lty = "dotted")
     abline(v = t[x$changePoint], lty = "dashed", col = "red")
     abline(v = t[x$detectionTime], lty = "dashed", col = "blue")
   }
