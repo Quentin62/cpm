@@ -23,5 +23,8 @@ processStream <- function(x, cpmType, ARL0 = 500, startup = 20, lambda = NA) {
     cps <- res[["cps"]][1:numChanges]
     dts <- res[["dts"]][1:numChanges]
   }
-  return(list(x = x, changePoints = cps, detectionTimes = dts))
+  
+  out <- list(x = x, changePoints = cps, detectionTimes = dts)
+  class(out) = c("cpm", "processStream")
+  return(out)
 }

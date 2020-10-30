@@ -31,8 +31,9 @@ detectChangePointBatch <- function(x, cpmType, alpha = 0.05, lambda = NA) {
       changePoint <- 0
     }
   }
-  return(list(
-    x = x, Ds = res[["Ds"]], changePoint = changePoint, changeDetected = changeDetected,
-    alpha = alpha, threshold = threshold
-  ))
+  
+  out <- list(x = x, Ds = res[["Ds"]], changePoint = changePoint, changeDetected = changeDetected,
+              alpha = alpha, threshold = threshold)
+  class(out) = c("cpm", "detectChangePoint", "batch")
+  return(out)
 }

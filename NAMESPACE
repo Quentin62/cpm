@@ -10,5 +10,9 @@ export(getStatistics)
 export(cpmReset)
 export(changeDetected)
 
+S3method(plot,cpm)
+export(plotDs)
+
 import(methods)
 import(stats)
+importFrom("graphics", "abline")

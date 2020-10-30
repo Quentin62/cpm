@@ -20,5 +20,8 @@ detectChangePoint <- function(x, cpmType, ARL0 = 500, startup = 20, lambda = NA)
   if (dt == 0) {
     dt <- length(x)
   } # needed if no change points are detected
-  return(list(x = x, Ds = res[["Ds"]][1:dt], thresholds = thresholds, changePoint = res[["cp"]], detectionTime = res[["dt"]], changeDetected = res[["dt"]] > 0))
+  
+  out <- list(x = x, Ds = res[["Ds"]][1:dt], thresholds = thresholds, changePoint = res[["cp"]], detectionTime = res[["dt"]], changeDetected = res[["dt"]] > 0)
+  class(out) = c("cpm", "detectChangePoint")
+  return(out)
 }
