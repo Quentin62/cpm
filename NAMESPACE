@@ -1,0 +1,8 @@
+## package has a dynamic library
+useDynLib(cpm)
+
+## and two exported functions
+export(detectChangePoint,detectChangePointBatch,processStream,getBatchThreshold,makeChangePointModel,processObservation,getStatistics,cpmReset,changeDetected)
+
+import(methods)
+import(stats)
