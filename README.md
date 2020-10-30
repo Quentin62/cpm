@@ -1,14 +1,21 @@
-# cpm
+# cpm: Change Point Model
 
-Sequential and Batch Change Detection Using Parametric and Nonparametric Methods
+Sequential and batch change detection for univariate data streams, using the change point model framework. Functions are provided to allow nonparametric distribution-free change detection in the mean, variance, or general distribution of a given sequence of observations. Parametric change detection methods are also provided for Gaussian, Bernoulli and Exponential sequences. Both the batch (Phase I) and sequential (Phase II) settings are supported, and the sequences may contain either a single or multiple change points.
 
 [![R build status](https://github.com/Quentin62/cpm/workflows/R-CMD-check/badge.svg)](https://github.com/Quentin62/cpm/actions)
 
-This is an unofficial repository
+This is an unofficial repository. The official version is available on the [CRAN repository](https://cran.r-project.org/package=cpm). 
 
-## Author
+## Installation
 
-The cpm package is developed by Gordon J. Ross <gordon@gordonjross.co.uk> and distributed under the GPL-3 licence.
+``` r
+library(remotes)
+install_github("Quentin62/cpm", build_vignettes = TRUE)
+```
+
+## Credits
+
+The **cpm** package is developed by Gordon J. Ross <gordon@gordonjross.co.uk> and distributed under the GPL-3 licence.
 
 ## Reference
 
