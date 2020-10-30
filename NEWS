@@ -1,0 +1,4 @@
+version 2.4
+- add plot and plotDs functions
+- add na.rm = TRUE when looking for the max Ds value in detectChangePointBatch function
+- styler code + examples
