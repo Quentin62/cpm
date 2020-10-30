@@ -1,8 +1,14 @@
-## package has a dynamic library
-useDynLib(cpm)
+useDynLib(cpm, .registration = TRUE)
 
-## and two exported functions
-export(detectChangePoint,detectChangePointBatch,processStream,getBatchThreshold,makeChangePointModel,processObservation,getStatistics,cpmReset,changeDetected)
+export(detectChangePoint)
+export(detectChangePointBatch)
+export(processStream)
+export(getBatchThreshold)
+export(makeChangePointModel)
+export(processObservation)
+export(getStatistics)
+export(cpmReset)
+export(changeDetected)
 
 import(methods)
 import(stats)
