@@ -1,5 +1,3 @@
 changeDetected <- function(cpm) {
-    return(cpm@changeDetected)
+  return(cpm@changeDetected)
 }
-	
-
