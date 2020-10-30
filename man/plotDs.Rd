@@ -5,6 +5,7 @@
   plotDs(
     x,
     t = NULL,
+    type = "l",
     ...
   )
 }
@@ -19,7 +20,7 @@
 }
 
 \description{
-  Plot test statistics and detection threshold
+  Plot test statistics and detection threshold. The changepoint is plot in red and the dDetection time in blue.
 }
 \examples{
 ## Use a Student-t CPM to detect a mean shift in a stream of Gaussian

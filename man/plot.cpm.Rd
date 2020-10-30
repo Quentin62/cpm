@@ -5,6 +5,8 @@
   \method{plot}{cpm}(
     x,
     t = NULL,
+    type = "l",
+    addDetectionTimes = FALSE,
     ...
   )
 }
@@ -15,11 +17,13 @@
   
   \item{type}{type of plot should be drawn. Possible types are "p" for points, "l" for lines, ...}
     
+  \item{addDetectionTimes}{If TRUE, detection times are added to the plot}
+ 
   \item{...}{extra arguments for plot}
 }
 
 \description{
-  Plot signal and changepoints
+  Plot signal and changepoints (in red). Detection times are plotted in blue.
 }
 
 \examples{
