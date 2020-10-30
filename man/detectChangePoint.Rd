@@ -47,24 +47,24 @@ and are able to detect both increases and decreases in the parameters monitored.
      \seealso{
        \code{\link{processStream}, \link{detectChangePointBatch}}.
      }
-     \examples{
-     ## Use a Student-t CPM to detect a mean shift in a stream of Gaussian 
-     ## random variables which occurs after the 100th observation
-     x <- c(rnorm(100,0,1),rnorm(1000,1,1))
-     detectChangePoint(x,"Student",ARL0=500,startup=20)
+\examples{
+## Use a Student-t CPM to detect a mean shift in a stream of Gaussian
+## random variables which occurs after the 100th observation
+x <- c(rnorm(100, 0, 1), rnorm(1000, 1, 1))
+detectChangePoint(x, "Student", ARL0 = 500, startup = 20)
 
 
-     ## Use a Mood CPM to detect a scale shift in a stream of Student-t 
-     ## random variables which occurs after the 100th observation
-     x <- c(rt(100,5),rt(100,5)*2)
-     detectChangePoint(x,"Mood",ARL0=500,startup=20)
+## Use a Mood CPM to detect a scale shift in a stream of Student-t
+## random variables which occurs after the 100th observation
+x <- c(rt(100, 5), rt(100, 5) * 2)
+detectChangePoint(x, "Mood", ARL0 = 500, startup = 20)
 
-     ## Use a FET CPM to detect a parameter shift in a stream of Bernoulli 
-     ##observations. In this case, the lambda parameter acts to reduce the 
-     ##discreteness of the test statistic.
-     x <- c(rbinom(100,1,0.2), rbinom(1000,1,0.5))
-     detectChangePoint(x,"FET",ARL0=500,startup=20,lambda=0.3)
-     }
+## Use a FET CPM to detect a parameter shift in a stream of Bernoulli
+## observations. In this case, the lambda parameter acts to reduce the
+## discreteness of the test statistic.
+x <- c(rbinom(100, 1, 0.2), rbinom(1000, 1, 0.5))
+detectChangePoint(x, "FET", ARL0 = 500, startup = 20, lambda = 0.3)
+}
      
      
 \references{

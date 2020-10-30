@@ -40,9 +40,9 @@
      }
 
 
-     \examples{
-     ## Returns the threshold for n=1000, alpha=0.05 and the Mann-Whitney CPM
-     h <- getBatchThreshold("Mann-Whitney", 0.05, 1000)
+\examples{
+## Returns the threshold for n=1000, alpha=0.05 and the Mann-Whitney CPM
+h <- getBatchThreshold("Mann-Whitney", 0.05, 1000)
 }
 
 
